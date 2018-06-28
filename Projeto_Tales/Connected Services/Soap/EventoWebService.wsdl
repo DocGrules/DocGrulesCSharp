@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://services.soap.grules.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="EventoWebService" targetNamespace="http://services.soap.grules.com/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://desktop-m9sfvt1:8080/grules-soap-sever/EventoWebService?xsd=1" namespace="http://services.soap.grules.com/" />
+    </xsd:schema>
+  </types>
+  <message name="loadAllEvento">
+    <part name="parameters" element="tns:loadAllEvento" />
+  </message>
+  <message name="loadAllEventoResponse">
+    <part name="parameters" element="tns:loadAllEventoResponse" />
+  </message>
+  <message name="loadAllSemestre">
+    <part name="parameters" element="tns:loadAllSemestre" />
+  </message>
+  <message name="loadAllSemestreResponse">
+    <part name="parameters" element="tns:loadAllSemestreResponse" />
+  </message>
+  <message name="saveEvento">
+    <part name="parameters" element="tns:saveEvento" />
+  </message>
+  <message name="saveEventoResponse">
+    <part name="parameters" element="tns:saveEventoResponse" />
+  </message>
+  <message name="deleteEvento">
+    <part name="parameters" element="tns:deleteEvento" />
+  </message>
+  <message name="deleteEventoResponse">
+    <part name="parameters" element="tns:deleteEventoResponse" />
+  </message>
+  <message name="updateEvento">
+    <part name="parameters" element="tns:updateEvento" />
+  </message>
+  <message name="updateEventoResponse">
+    <part name="parameters" element="tns:updateEventoResponse" />
+  </message>
+  <message name="findEvento">
+    <part name="parameters" element="tns:findEvento" />
+  </message>
+  <message name="findEventoResponse">
+    <part name="parameters" element="tns:findEventoResponse" />
+  </message>
+  <message name="findAluno">
+    <part name="parameters" element="tns:findAluno" />
+  </message>
+  <message name="findAlunoResponse">
+    <part name="parameters" element="tns:findAlunoResponse" />
+  </message>
+  <message name="saveAluno">
+    <part name="parameters" element="tns:saveAluno" />
+  </message>
+  <message name="saveAlunoResponse">
+    <part name="parameters" element="tns:saveAlunoResponse" />
+  </message>
+  <message name="saveApresentacao">
+    <part name="parameters" element="tns:saveApresentacao" />
+  </message>
+  <message name="saveApresentacaoResponse">
+    <part name="parameters" element="tns:saveApresentacaoResponse" />
+  </message>
+  <message name="registrarChamada">
+    <part name="parameters" element="tns:registrarChamada" />
+  </message>
+  <message name="registrarChamadaResponse">
+    <part name="parameters" element="tns:registrarChamadaResponse" />
+  </message>
+  <message name="loadAllAluno">
+    <part name="parameters" element="tns:loadAllAluno" />
+  </message>
+  <message name="loadAllAlunoResponse">
+    <part name="parameters" element="tns:loadAllAlunoResponse" />
+  </message>
+  <message name="removerChamada">
+    <part name="parameters" element="tns:removerChamada" />
+  </message>
+  <message name="removerChamadaResponse">
+    <part name="parameters" element="tns:removerChamadaResponse" />
+  </message>
+  <message name="findApresentacao">
+    <part name="parameters" element="tns:findApresentacao" />
+  </message>
+  <message name="findApresentacaoResponse">
+    <part name="parameters" element="tns:findApresentacaoResponse" />
+  </message>
+  <message name="updateAluno">
+    <part name="parameters" element="tns:updateAluno" />
+  </message>
+  <message name="updateAlunoResponse">
+    <part name="parameters" element="tns:updateAlunoResponse" />
+  </message>
+  <message name="deleteAluno">
+    <part name="parameters" element="tns:deleteAluno" />
+  </message>
+  <message name="deleteAlunoResponse">
+    <part name="parameters" element="tns:deleteAlunoResponse" />
+  </message>
+  <message name="updateApresentacao">
+    <part name="parameters" element="tns:updateApresentacao" />
+  </message>
+  <message name="updateApresentacaoResponse">
+    <part name="parameters" element="tns:updateApresentacaoResponse" />
+  </message>
+  <message name="loadAllApresentacao">
+    <part name="parameters" element="tns:loadAllApresentacao" />
+  </message>
+  <message name="loadAllApresentacaoResponse">
+    <part name="parameters" element="tns:loadAllApresentacaoResponse" />
+  </message>
+  <message name="loadApresentacaoPorDia">
+    <part name="parameters" element="tns:loadApresentacaoPorDia" />
+  </message>
+  <message name="loadApresentacaoPorDiaResponse">
+    <part name="parameters" element="tns:loadApresentacaoPorDiaResponse" />
+  </message>
+  <message name="loadDistinctDatasPorApresentacao">
+    <part name="parameters" element="tns:loadDistinctDatasPorApresentacao" />
+  </message>
+  <message name="loadDistinctDatasPorApresentacaoResponse">
+    <part name="parameters" element="tns:loadDistinctDatasPorApresentacaoResponse" />
+  </message>
+  <message name="verificaMatricula">
+    <part name="parameters" element="tns:verificaMatricula" />
+  </message>
+  <message name="verificaMatriculaResponse">
+    <part name="parameters" element="tns:verificaMatriculaResponse" />
+  </message>
+  <message name="registrarAlunoApresentacao">
+    <part name="parameters" element="tns:registrarAlunoApresentacao" />
+  </message>
+  <message name="registrarAlunoApresentacaoResponse">
+    <part name="parameters" element="tns:registrarAlunoApresentacaoResponse" />
+  </message>
+  <message name="removerAlunoApresentacao">
+    <part name="parameters" element="tns:removerAlunoApresentacao" />
+  </message>
+  <message name="removerAlunoApresentacaoResponse">
+    <part name="parameters" element="tns:removerAlunoApresentacaoResponse" />
+  </message>
+  <message name="deleteApresentacao">
+    <part name="parameters" element="tns:deleteApresentacao" />
+  </message>
+  <message name="deleteApresentacaoResponse">
+    <part name="parameters" element="tns:deleteApresentacaoResponse" />
+  </message>
+  <portType name="GrulesWebService">
+    <operation name="loadAllEvento">
+      <input wsam:Action="http://services.soap.grules.com/GrulesWebService/loadAllEventoRequest" message="tns:loadAllEvento" />
+      <output wsam:Action="http://services.soap.grules.com/GrulesWebService/loadAllEventoResponse" message="tns:loadAllEventoResponse" />
+    </operation>
+    <operation name="loadAllSemestre">
+      <input wsam:Action="http://services.soap.grules.com/GrulesWebService/loadAllSemestreRequest" message="tns:loadAllSemestre" />
+      <output wsam:Action="http://services.soap.grules.com/GrulesWebService/loadAllSemestreResponse" message="tns:loadAllSemestreResponse" />
+    </operation>
+    <operation name="saveEvento">
+      <input wsam:Action="http://services.soap.grules.com/GrulesWebService/saveEventoRequest" message="tns:saveEvento" />
+      <output wsam:Action="http://services.soap.grules.com/GrulesWebService/saveEventoResponse" message="tns:saveEventoResponse" />
+    </operation>
+    <operation name="deleteEvento">
+      <input wsam:Action="http://services.soap.grules.com/GrulesWebService/deleteEventoRequest" message="tns:deleteEvento" />
+      <output wsam:Action="http://services.soap.grules.com/GrulesWebService/deleteEventoResponse" message="tns:deleteEventoResponse" />
+    </operation>
+    <operation name="updateEvento">
+      <input wsam:Action="http://services.soap.grules.com/GrulesWebService/updateEventoRequest" message="tns:updateEvento" />
+      <output wsam:Action="http://services.soap.grules.com/GrulesWebService/updateEventoResponse" message="tns:updateEventoResponse" />
+    </operation>
+    <operation name="findEvento">
+      <input wsam:Action="http://services.soap.grules.com/GrulesWebService/findEventoRequest" message="tns:findEvento" />
+      <output wsam:Action="http://services.soap.grules.com/GrulesWebService/findEventoResponse" message="tns:findEventoResponse" />
+    </operation>
+    <operation name="findAluno">
+      <input wsam:Action="http://services.soap.grules.com/GrulesWebService/findAlunoRequest" message="tns:findAluno" />
+      <output wsam:Action="http://services.soap.grules.com/GrulesWebService/findAlunoResponse" message="tns:findAlunoResponse" />
+    </operation>
+    <operation name="saveAluno">
+      <input wsam:Action="http://services.soap.grules.com/GrulesWebService/saveAlunoRequest" message="tns:saveAluno" />
+      <output wsam:Action="http://services.soap.grules.com/GrulesWebService/saveAlunoResponse" message="tns:saveAlunoResponse" />
+    </operation>
+    <operation name="saveApresentacao">
+      <input wsam:Action="http://services.soap.grules.com/GrulesWebService/saveApresentacaoRequest" message="tns:saveApresentacao" />
+      <output wsam:Action="http://services.soap.grules.com/GrulesWebService/saveApresentacaoResponse" message="tns:saveApresentacaoResponse" />
+    </operation>
+    <operation name="registrarChamada">
+      <input wsam:Action="http://services.soap.grules.com/GrulesWebService/registrarChamadaRequest" message="tns:registrarChamada" />
+      <output wsam:Action="http://services.soap.grules.com/GrulesWebService/registrarChamadaResponse" message="tns:registrarChamadaResponse" />
+    </operation>
+    <operation name="loadAllAluno">
+      <input wsam:Action="http://services.soap.grules.com/GrulesWebService/loadAllAlunoRequest" message="tns:loadAllAluno" />
+      <output wsam:Action="http://services.soap.grules.com/GrulesWebService/loadAllAlunoResponse" message="tns:loadAllAlunoResponse" />
+    </operation>
+    <operation name="removerChamada">
+      <input wsam:Action="http://services.soap.grules.com/GrulesWebService/removerChamadaRequest" message="tns:removerChamada" />
+      <output wsam:Action="http://services.soap.grules.com/GrulesWebService/removerChamadaResponse" message="tns:removerChamadaResponse" />
+    </operation>
+    <operation name="findApresentacao">
+      <input wsam:Action="http://services.soap.grules.com/GrulesWebService/findApresentacaoRequest" message="tns:findApresentacao" />
+      <output wsam:Action="http://services.soap.grules.com/GrulesWebService/findApresentacaoResponse" message="tns:findApresentacaoResponse" />
+    </operation>
+    <operation name="updateAluno">
+      <input wsam:Action="http://services.soap.grules.com/GrulesWebService/updateAlunoRequest" message="tns:updateAluno" />
+      <output wsam:Action="http://services.soap.grules.com/GrulesWebService/updateAlunoResponse" message="tns:updateAlunoResponse" />
+    </operation>
+    <operation name="deleteAluno">
+      <input wsam:Action="http://services.soap.grules.com/GrulesWebService/deleteAlunoRequest" message="tns:deleteAluno" />
+      <output wsam:Action="http://services.soap.grules.com/GrulesWebService/deleteAlunoResponse" message="tns:deleteAlunoResponse" />
+    </operation>
+    <operation name="updateApresentacao">
+      <input wsam:Action="http://services.soap.grules.com/GrulesWebService/updateApresentacaoRequest" message="tns:updateApresentacao" />
+      <output wsam:Action="http://services.soap.grules.com/GrulesWebService/updateApresentacaoResponse" message="tns:updateApresentacaoResponse" />
+    </operation>
+    <operation name="loadAllApresentacao">
+      <input wsam:Action="http://services.soap.grules.com/GrulesWebService/loadAllApresentacaoRequest" message="tns:loadAllApresentacao" />
+      <output wsam:Action="http://services.soap.grules.com/GrulesWebService/loadAllApresentacaoResponse" message="tns:loadAllApresentacaoResponse" />
+    </operation>
+    <operation name="loadApresentacaoPorDia">
+      <input wsam:Action="http://services.soap.grules.com/GrulesWebService/loadApresentacaoPorDiaRequest" message="tns:loadApresentacaoPorDia" />
+      <output wsam:Action="http://services.soap.grules.com/GrulesWebService/loadApresentacaoPorDiaResponse" message="tns:loadApresentacaoPorDiaResponse" />
+    </operation>
+    <operation name="loadDistinctDatasPorApresentacao">
+      <input wsam:Action="http://services.soap.grules.com/GrulesWebService/loadDistinctDatasPorApresentacaoRequest" message="tns:loadDistinctDatasPorApresentacao" />
+      <output wsam:Action="http://services.soap.grules.com/GrulesWebService/loadDistinctDatasPorApresentacaoResponse" message="tns:loadDistinctDatasPorApresentacaoResponse" />
+    </operation>
+    <operation name="verificaMatricula">
+      <input wsam:Action="http://services.soap.grules.com/GrulesWebService/verificaMatriculaRequest" message="tns:verificaMatricula" />
+      <output wsam:Action="http://services.soap.grules.com/GrulesWebService/verificaMatriculaResponse" message="tns:verificaMatriculaResponse" />
+    </operation>
+    <operation name="registrarAlunoApresentacao">
+      <input wsam:Action="http://services.soap.grules.com/GrulesWebService/registrarAlunoApresentacaoRequest" message="tns:registrarAlunoApresentacao" />
+      <output wsam:Action="http://services.soap.grules.com/GrulesWebService/registrarAlunoApresentacaoResponse" message="tns:registrarAlunoApresentacaoResponse" />
+    </operation>
+    <operation name="removerAlunoApresentacao">
+      <input wsam:Action="http://services.soap.grules.com/GrulesWebService/removerAlunoApresentacaoRequest" message="tns:removerAlunoApresentacao" />
+      <output wsam:Action="http://services.soap.grules.com/GrulesWebService/removerAlunoApresentacaoResponse" message="tns:removerAlunoApresentacaoResponse" />
+    </operation>
+    <operation name="deleteApresentacao">
+      <input wsam:Action="http://services.soap.grules.com/GrulesWebService/deleteApresentacaoRequest" message="tns:deleteApresentacao" />
+      <output wsam:Action="http://services.soap.grules.com/GrulesWebService/deleteApresentacaoResponse" message="tns:deleteApresentacaoResponse" />
+    </operation>
+  </portType>
+  <binding name="GrulesWebServicePortBinding" type="tns:GrulesWebService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="loadAllEvento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="loadAllSemestre">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="saveEvento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="deleteEvento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="updateEvento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="findEvento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="findAluno">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="saveAluno">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="saveApresentacao">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="registrarChamada">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="loadAllAluno">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="removerChamada">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="findApresentacao">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="updateAluno">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="deleteAluno">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="updateApresentacao">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="loadAllApresentacao">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="loadApresentacaoPorDia">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="loadDistinctDatasPorApresentacao">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="verificaMatricula">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="registrarAlunoApresentacao">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="removerAlunoApresentacao">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="deleteApresentacao">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="EventoWebService">
+    <port name="GrulesWebServicePort" binding="tns:GrulesWebServicePortBinding">
+      <soap:address location="http://desktop-m9sfvt1:8080/grules-soap-sever/EventoWebService" />
+    </port>
+  </service>
+</definitions>

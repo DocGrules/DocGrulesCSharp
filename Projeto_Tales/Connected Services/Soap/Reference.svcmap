@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="5206c061-dfa9-4291-b30a-fa24d18f65e7" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="0b23b9b0-3dd6-4a50-9d2f-12ebd6d200fb" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://filho-pc:8080/Teste/WsTeste?wsdl" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://desktop-m9sfvt1:8080/grules-soap-sever/EventoWebService?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="WsTeste.xsd" MetadataType="Schema" ID="ef99857b-8607-4656-a3d1-e914cb07ae57" SourceId="1" SourceUrl="http://filho-pc:8080/Teste/WsTeste?xsd=1" />
-    <MetadataFile FileName="WsTeste.wsdl" MetadataType="Wsdl" ID="9939215f-c6fd-4dda-9cc0-0b25cf3b1b44" SourceId="1" SourceUrl="http://filho-pc:8080/Teste/WsTeste?wsdl" />
+    <MetadataFile FileName="EventoWebService.wsdl" MetadataType="Wsdl" ID="89796261-2498-4f64-995b-c5755fb34389" SourceId="1" SourceUrl="http://desktop-m9sfvt1:8080/grules-soap-sever/EventoWebService?wsdl" />
+    <MetadataFile FileName="EventoWebService.xsd" MetadataType="Schema" ID="ff52c69b-976d-48df-ac9b-58504f23ffb1" SourceId="1" SourceUrl="http://desktop-m9sfvt1:8080/grules-soap-sever/EventoWebService?xsd=1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

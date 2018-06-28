@@ -47,7 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Connected Services\teste\Reference.cs">
+    <Compile Include="Connected Services\Soap\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -81,12 +81,87 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="Connected Services\teste\Projeto_Tales.teste.SomaResponse.datasource">
+    <None Include="Connected Services\Soap\EventoWebService.wsdl" />
+    <None Include="Connected Services\Soap\EventoWebService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\Soap\Projeto_Tales.Soap.aluno.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\teste\WsTeste.wsdl" />
-    <None Include="Connected Services\teste\WsTeste.xsd">
-      <SubType>Designer</SubType>
+    <None Include="Connected Services\Soap\Projeto_Tales.Soap.apresentacao.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Soap\Projeto_Tales.Soap.deleteAlunoResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Soap\Projeto_Tales.Soap.deleteApresentacaoResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Soap\Projeto_Tales.Soap.deleteEventoResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Soap\Projeto_Tales.Soap.evento.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Soap\Projeto_Tales.Soap.findAlunoResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Soap\Projeto_Tales.Soap.findApresentacaoResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Soap\Projeto_Tales.Soap.findEventoResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Soap\Projeto_Tales.Soap.loadAllAlunoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Soap\Projeto_Tales.Soap.loadAllApresentacaoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Soap\Projeto_Tales.Soap.loadAllEventoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Soap\Projeto_Tales.Soap.loadAllSemestreResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Soap\Projeto_Tales.Soap.loadApresentacaoPorDiaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Soap\Projeto_Tales.Soap.loadDistinctDatasPorApresentacaoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Soap\Projeto_Tales.Soap.registrarAlunoApresentacaoResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Soap\Projeto_Tales.Soap.registrarChamadaResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Soap\Projeto_Tales.Soap.removerAlunoApresentacaoResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Soap\Projeto_Tales.Soap.removerChamadaResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Soap\Projeto_Tales.Soap.saveAlunoResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Soap\Projeto_Tales.Soap.saveApresentacaoResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Soap\Projeto_Tales.Soap.saveEventoResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Soap\Projeto_Tales.Soap.updateAlunoResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Soap\Projeto_Tales.Soap.updateApresentacaoResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Soap\Projeto_Tales.Soap.updateEventoResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Soap\Projeto_Tales.Soap.verificaMatriculaResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -105,22 +180,22 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\teste\" />
+    <Folder Include="ServicoWeb\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\teste\configuration91.svcinfo" />
+    <WCFMetadataStorage Include="Connected Services\Soap\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\teste\configuration.svcinfo" />
+    <None Include="Connected Services\Soap\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\teste\Reference.svcmap">
+    <None Include="Connected Services\Soap\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\Soap\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ServicoWeb\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

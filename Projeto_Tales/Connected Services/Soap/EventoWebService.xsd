@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://services.soap.grules.com/" targetNamespace="http://services.soap.grules.com/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="deleteAluno" type="tns:deleteAluno" />
+  <xs:element name="deleteAlunoResponse" type="tns:deleteAlunoResponse" />
+  <xs:element name="deleteApresentacao" type="tns:deleteApresentacao" />
+  <xs:element name="deleteApresentacaoResponse" type="tns:deleteApresentacaoResponse" />
+  <xs:element name="deleteEvento" type="tns:deleteEvento" />
+  <xs:element name="deleteEventoResponse" type="tns:deleteEventoResponse" />
+  <xs:element name="findAluno" type="tns:findAluno" />
+  <xs:element name="findAlunoResponse" type="tns:findAlunoResponse" />
+  <xs:element name="findApresentacao" type="tns:findApresentacao" />
+  <xs:element name="findApresentacaoResponse" type="tns:findApresentacaoResponse" />
+  <xs:element name="findEvento" type="tns:findEvento" />
+  <xs:element name="findEventoResponse" type="tns:findEventoResponse" />
+  <xs:element name="loadAllAluno" type="tns:loadAllAluno" />
+  <xs:element name="loadAllAlunoResponse" type="tns:loadAllAlunoResponse" />
+  <xs:element name="loadAllApresentacao" type="tns:loadAllApresentacao" />
+  <xs:element name="loadAllApresentacaoResponse" type="tns:loadAllApresentacaoResponse" />
+  <xs:element name="loadAllEvento" type="tns:loadAllEvento" />
+  <xs:element name="loadAllEventoResponse" type="tns:loadAllEventoResponse" />
+  <xs:element name="loadAllSemestre" type="tns:loadAllSemestre" />
+  <xs:element name="loadAllSemestreResponse" type="tns:loadAllSemestreResponse" />
+  <xs:element name="loadApresentacaoPorDia" type="tns:loadApresentacaoPorDia" />
+  <xs:element name="loadApresentacaoPorDiaResponse" type="tns:loadApresentacaoPorDiaResponse" />
+  <xs:element name="loadDistinctDatasPorApresentacao" type="tns:loadDistinctDatasPorApresentacao" />
+  <xs:element name="loadDistinctDatasPorApresentacaoResponse" type="tns:loadDistinctDatasPorApresentacaoResponse" />
+  <xs:element name="registrarAlunoApresentacao" type="tns:registrarAlunoApresentacao" />
+  <xs:element name="registrarAlunoApresentacaoResponse" type="tns:registrarAlunoApresentacaoResponse" />
+  <xs:element name="registrarChamada" type="tns:registrarChamada" />
+  <xs:element name="registrarChamadaResponse" type="tns:registrarChamadaResponse" />
+  <xs:element name="removerAlunoApresentacao" type="tns:removerAlunoApresentacao" />
+  <xs:element name="removerAlunoApresentacaoResponse" type="tns:removerAlunoApresentacaoResponse" />
+  <xs:element name="removerChamada" type="tns:removerChamada" />
+  <xs:element name="removerChamadaResponse" type="tns:removerChamadaResponse" />
+  <xs:element name="saveAluno" type="tns:saveAluno" />
+  <xs:element name="saveAlunoResponse" type="tns:saveAlunoResponse" />
+  <xs:element name="saveApresentacao" type="tns:saveApresentacao" />
+  <xs:element name="saveApresentacaoResponse" type="tns:saveApresentacaoResponse" />
+  <xs:element name="saveEvento" type="tns:saveEvento" />
+  <xs:element name="saveEventoResponse" type="tns:saveEventoResponse" />
+  <xs:element name="updateAluno" type="tns:updateAluno" />
+  <xs:element name="updateAlunoResponse" type="tns:updateAlunoResponse" />
+  <xs:element name="updateApresentacao" type="tns:updateApresentacao" />
+  <xs:element name="updateApresentacaoResponse" type="tns:updateApresentacaoResponse" />
+  <xs:element name="updateEvento" type="tns:updateEvento" />
+  <xs:element name="updateEventoResponse" type="tns:updateEventoResponse" />
+  <xs:element name="verificaMatricula" type="tns:verificaMatricula" />
+  <xs:element name="verificaMatriculaResponse" type="tns:verificaMatriculaResponse" />
+  <xs:complexType name="saveEvento">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="evento" type="tns:evento" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="evento">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="alunos" nillable="true" type="tns:aluno" />
+      <xs:element minOccurs="0" name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="semestre" type="xs:string" />
+      <xs:element minOccurs="0" name="tema" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="aluno">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="foto" type="xs:string" />
+      <xs:element minOccurs="0" name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="matricula" type="xs:string" />
+      <xs:element minOccurs="0" name="nome" type="xs:string" />
+      <xs:element minOccurs="0" name="periodo" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="saveEventoResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="findAluno">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" type="xs:anyType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findAlunoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:aluno" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="loadAllEvento">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="loadAllEventoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:evento" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="loadAllApresentacao">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="loadAllApresentacaoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:apresentacao" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="apresentacao">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="alunos" nillable="true" type="tns:aluno" />
+      <xs:element minOccurs="0" name="dataHora" type="xs:string" />
+      <xs:element minOccurs="0" name="evento" type="tns:evento" />
+      <xs:element minOccurs="0" name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="resumo" type="xs:string" />
+      <xs:element minOccurs="0" name="titulo" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="verificaMatricula">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="matricula" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="verificaMatriculaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="saveAluno">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="aluno" type="tns:aluno" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="saveAlunoResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="deleteEvento">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="evento" type="tns:evento" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteEventoResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="updateAluno">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="aluno" type="tns:aluno" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateAlunoResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="loadAllAluno">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="loadAllAlunoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:aluno" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="removerChamada">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="semestre" type="xs:string" />
+      <xs:element minOccurs="0" name="matricula" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="removerChamadaResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="loadDistinctDatasPorApresentacao">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="loadDistinctDatasPorApresentacaoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="removerAlunoApresentacao">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idAluno" type="xs:int" />
+      <xs:element minOccurs="0" name="idApresentacao" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="removerAlunoApresentacaoResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="deleteAluno">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="aluno" type="tns:aluno" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteAlunoResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="updateApresentacao">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="apresentacao" type="tns:apresentacao" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateApresentacaoResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="updateEvento">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="evento" type="tns:evento" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateEventoResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="registrarChamada">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="semestre" type="xs:string" />
+      <xs:element minOccurs="0" name="matricula" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="registrarChamadaResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="deleteApresentacao">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="apresentacao" type="tns:apresentacao" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteApresentacaoResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="findEvento">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" type="xs:anyType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findEventoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:evento" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="registrarAlunoApresentacao">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idAluno" type="xs:int" />
+      <xs:element minOccurs="0" name="idApresentacao" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="registrarAlunoApresentacaoResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="saveApresentacao">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="apresentacao" type="tns:apresentacao" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="saveApresentacaoResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="loadAllSemestre">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="loadAllSemestreResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findApresentacao">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" type="xs:anyType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findApresentacaoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:apresentacao" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="loadApresentacaoPorDia">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="data" type="xs:string" />
+      <xs:element minOccurs="0" name="eventoId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="loadApresentacaoPorDiaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:apresentacao" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

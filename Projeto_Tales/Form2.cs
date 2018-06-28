@@ -14,8 +14,11 @@ namespace Projeto_Tales
     {
         public Form2()
         {
+            
+
             InitializeComponent();
         }
+        Soap.GrulesWebServiceClient test = new Soap.GrulesWebServiceClient();
 
         private void BtnPesquisar_Click(object sender, EventArgs e)
         {
@@ -44,14 +47,25 @@ namespace Projeto_Tales
 
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
-            teste.WsTesteClient teste = new teste.WsTesteClient();
 
-            teste.soma
-
-            soma = teste.Soma(txtnum1.text, txtnum2.text);
-
-            txresultado.text = soma;
+            test.registrarChamada(CbxEventos.Text,TbxMatricula.Text);
             MessageBox.Show("Salvo com Sucesso!");
+
+          
+        }
+
+        private void CbxEventos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+        
+        }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+            string[] teste = test.loadAllSemestre();
+            List<String> semestres = teste.ToList();
+            CbxEventos.DataSource = semestres;
+            
+
         }
     }
 }
