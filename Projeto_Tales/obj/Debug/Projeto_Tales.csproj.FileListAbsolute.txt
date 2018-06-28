@@ -1,0 +1,11 @@
+c:\users\filho\source\repos\Projeto_Tales\Projeto_Tales\bin\Debug\Projeto_Tales.exe.config
+c:\users\filho\source\repos\Projeto_Tales\Projeto_Tales\bin\Debug\Projeto_Tales.exe
+c:\users\filho\source\repos\Projeto_Tales\Projeto_Tales\bin\Debug\Projeto_Tales.pdb
+c:\users\filho\source\repos\Projeto_Tales\Projeto_Tales\obj\Debug\Projeto_Tales.csprojResolveAssemblyReference.cache
+c:\users\filho\source\repos\Projeto_Tales\Projeto_Tales\obj\Debug\Projeto_Tales.Form1.resources
+c:\users\filho\source\repos\Projeto_Tales\Projeto_Tales\obj\Debug\Projeto_Tales.Properties.Resources.resources
+c:\users\filho\source\repos\Projeto_Tales\Projeto_Tales\obj\Debug\Projeto_Tales.csproj.GenerateResource.Cache
+c:\users\filho\source\repos\Projeto_Tales\Projeto_Tales\obj\Debug\Projeto_Tales.csproj.CoreCompileInputs.cache
+c:\users\filho\source\repos\Projeto_Tales\Projeto_Tales\obj\Debug\Projeto_Tales.exe
+c:\users\filho\source\repos\Projeto_Tales\Projeto_Tales\obj\Debug\Projeto_Tales.pdb
+c:\users\filho\source\repos\Projeto_Tales\Projeto_Tales\obj\Debug\Projeto_Tales.Form2.resources
