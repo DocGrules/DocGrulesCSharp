@@ -22,7 +22,7 @@ namespace Projeto_Tales
 
         private void BtnPesquisar_Click(object sender, EventArgs e)
         {
-            if (TbxMatricula.Text == "150300007")
+            if (test.verificaMatricula(TbxMatricula.Text))
             {
                 MessageBox.Show("Matrícula aceita!");
             }
@@ -35,7 +35,7 @@ namespace Projeto_Tales
 
         private void BtnConsultar_Click(object sender, EventArgs e)
         {
-            if (TbxCPF.Text=="11111111111")
+            if (TbxCPF.Text=="08005793642")
             {
                 MessageBox.Show("CPF Válido!");
             }
@@ -64,7 +64,9 @@ namespace Projeto_Tales
             string[] teste = test.loadAllSemestre();
             List<String> semestres = teste.ToList();
             CbxEventos.DataSource = semestres;
-            
+            CbxEventos.DataSource = semestres;
+            CbxEventos.DataSource = semestres;
+
 
         }
     }
