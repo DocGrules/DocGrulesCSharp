@@ -19,6 +19,8 @@ namespace Projeto_Tales
             InitializeComponent();
         }
         Soap.GrulesWebServiceClient test = new Soap.GrulesWebServiceClient();
+        cpfvalida.validacpfClient test2 = new cpfvalida.validacpfClient();
+
 
         private void BtnPesquisar_Click(object sender, EventArgs e)
         {
@@ -35,7 +37,8 @@ namespace Projeto_Tales
 
         private void BtnConsultar_Click(object sender, EventArgs e)
         {
-            if (TbxCPF.Text=="08005793642")
+            //long cpf = (long)Convert.ToInt64(TbxCPF.Text);
+            if (test2.validarCPF(Convert.ToInt64(TbxCPF.Text)))
             {
                 MessageBox.Show("CPF Válido!");
             }
@@ -56,7 +59,7 @@ namespace Projeto_Tales
 
         private void CbxEventos_SelectedIndexChanged(object sender, EventArgs e)
         {
-        
+            
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -68,6 +71,11 @@ namespace Projeto_Tales
             CbxEventos.DataSource = semestres;
 
 
+        }
+
+        private void BtnSair_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

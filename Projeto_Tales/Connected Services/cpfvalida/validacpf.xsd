@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://validar/" targetNamespace="http://validar/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="validarCPF" type="tns:validarCPF" />
+  <xs:element name="validarCPFResponse" type="tns:validarCPFResponse" />
+  <xs:complexType name="validarCPF">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="validarCPFResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
